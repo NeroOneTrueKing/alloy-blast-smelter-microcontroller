@@ -52,6 +52,19 @@ Include programmed circuits in your patterns:
 
 ![image](https://github.com/NeroOneTrueKing/alloy-blast-smelter-microcontroller/assets/28197216/4663a5e7-a78d-45ea-a91c-a6377abb0e82)
 
+# Fluids:
+Optionally, also watch that an input hatch is empty.
+
+If the microcontroller is adjacent to (or is adjacent to a transvector interface which is connected to) an input hatch, then it will wait for that input hatch to be empty before transferring out the programmed circuit and token.
+
+# Customization:
+It doesn't have to be a programmed circuit! In fact, the code currently defaults to moving _molds_ for a fluid solidifier.
+
+In the code, where it says `targetName`, just change that string to match \[part of\] the name of the non-consumable you want the program to extract.
+You can also disable if it's looking for a token, and change the token name.
+
+To make changes to a microcontroller already in use by flashing your new program to a new EEPROM, then shift-right-clicking the microcontroller with your new EEPROM. This will switch its old EEPROM with your new one.
+
 # Debugging
 
 If it isn't working, set up another computer nearby, and place an Adapter adjacent to the microcontroller. This will make it visible as a component (https://ocdoc.cil.li/component:microcontroller),
